@@ -20,9 +20,9 @@ def position_taken?(board, index)
 end
 
 
-def valid_move?(board, index)
+def valid_move(board, index)
   
-  if index.between?(0,8) && position_taken?(board, index) == FALSE
+  if index.between(0,8) && position_taken?(board, index) == FALSE
    TRUE
  else
    FALSE
@@ -41,7 +41,7 @@ def turn(board)
   index = gets.strip
   input_to_index(index)
   
-if valid_move?(board, index) == TRUE
+if valid_move(board, index) == TRUE
   move(board, index, value = "X")
   display_board(board)
 else
